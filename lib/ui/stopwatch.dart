@@ -22,6 +22,7 @@ class _StopwatchState extends State<Stopwatch>
         elapsed = elapsed;
       });
     });
+    _ticker.start();
   }
 
   @override
