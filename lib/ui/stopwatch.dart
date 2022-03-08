@@ -2,7 +2,6 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
-import 'package:stopwatch_flutter/ui/elapsed_time_text.dart';
 import 'package:stopwatch_flutter/ui/stop_watch_renderer.dart';
 
 class Stopwatch extends StatefulWidget {
