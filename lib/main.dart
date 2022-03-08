@@ -26,9 +26,12 @@ class MyHomePage extends StatelessWidget {
       value: SystemUiOverlayStyle.light,
       child: Scaffold(
         body: Center(
-          child: AspectRatio(
-            child: Stopwatch(),
-            aspectRatio: 1.0,
+          child: Padding(
+            padding: const EdgeInsets.all(32.0),
+            child: AspectRatio(
+              child: Stopwatch(),
+              aspectRatio: 1.0,
+            ),
           ),
         ),
       ),
