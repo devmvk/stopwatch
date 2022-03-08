@@ -11,9 +11,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      theme: ThemeData.dark().copyWith(
-        scaffoldBackgroundColor: Colors.black
-      ),
+      theme: ThemeData.dark().copyWith(scaffoldBackgroundColor: Colors.black),
       home: MyHomePage(),
     );
   }
@@ -28,7 +26,10 @@ class MyHomePage extends StatelessWidget {
       value: SystemUiOverlayStyle.light,
       child: Scaffold(
         body: Center(
-          child: Stopwatch(),
+          child: AspectRatio(
+            child: Stopwatch(),
+            aspectRatio: 1.0,
+          ),
         ),
       ),
     );
