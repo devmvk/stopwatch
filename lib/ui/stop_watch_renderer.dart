@@ -15,9 +15,9 @@ class StopWatchRenderer extends StatelessWidget {
         Container(
           color: Colors.amberAccent,
         ),
-        ElapsedTimeText(
-          elapsed: elapsed,
-        ),
+        // ElapsedTimeText(
+        //   elapsed: elapsed,
+        // ),
       ],
     );
   }
