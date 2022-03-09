@@ -13,7 +13,7 @@ class StopWatchRenderer extends StatelessWidget {
     return Stack(
       children: [
         Transform(
-          transform: Matrix4.identity(),
+          transform: Matrix4.skewX(2),
           child: Container(
             color: Colors.amberAccent,
           ),
