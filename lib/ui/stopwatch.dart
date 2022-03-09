@@ -12,14 +12,14 @@ class Stopwatch extends StatefulWidget {
 class _StopwatchState extends State<Stopwatch>
     with SingleTickerProviderStateMixin {
   late final Ticker _ticker;
-  Duration elapsed = Duration.zero;
+  Duration _elapsed = Duration.zero;
 
   @override
   void initState() {
     super.initState();
-    _ticker = this.createTicker((elapsed) {
+    _ticker = this.createTicker((elapsedTicker) {
       setState(() {
-        elapsed = elapsed;
+        _elapsed = elapsedTicker;
       });
     });
     _ticker.start();
@@ -27,7 +27,7 @@ class _StopwatchState extends State<Stopwatch>
 
   @override
   Widget build(BuildContext context) {
-    return StopWatchRenderer(elapsed: elapsed);
+    return StopWatchRenderer(elapsed: _elapsed);
   }
 
   @override
