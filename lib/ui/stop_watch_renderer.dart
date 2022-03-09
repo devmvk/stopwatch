@@ -12,8 +12,11 @@ class StopWatchRenderer extends StatelessWidget {
   Widget build(BuildContext context) {
     return Stack(
       children: [
-        Container(
-          color: Colors.amberAccent,
+        Transform(
+          transform: Matrix4.identity(),
+          child: Container(
+            color: Colors.amberAccent,
+          ),
         ),
         // ElapsedTimeText(
         //   elapsed: elapsed,
