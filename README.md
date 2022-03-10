@@ -1,6 +1,6 @@
 # stopwatch_flutter
 
-A new Flutter project.
+A new Flutter project. Learning animations in flutter
 
 ## Getting Started
 
