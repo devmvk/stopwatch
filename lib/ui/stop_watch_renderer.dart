@@ -16,7 +16,8 @@ class StopWatchRenderer extends StatelessWidget {
       children: [
         Container(
           decoration: BoxDecoration(
-            border: Border.all(color: Colors.amberAccent)
+            border: Border.all(color: Colors.amberAccent),
+            borderRadius: BorderRadius.circular(radius)
           ),
         )
         // Transform(
