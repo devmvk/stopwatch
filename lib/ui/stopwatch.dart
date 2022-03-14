@@ -27,7 +27,11 @@ class _StopwatchState extends State<Stopwatch>
 
   @override
   Widget build(BuildContext context) {
-    return StopWatchRenderer(elapsed: _elapsed);
+    return LayoutBuilder(
+      builder: (context, constraints) {
+        return StopWatchRenderer(elapsed: _elapsed);
+      },
+    );
   }
 
   @override
