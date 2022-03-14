@@ -3,9 +3,11 @@ import 'package:stopwatch_flutter/ui/elapsed_time_text.dart';
 
 class StopWatchRenderer extends StatelessWidget {
   final Duration elapsed;
+  final double radius;
   const StopWatchRenderer({
     Key? key,
     required this.elapsed,
+    required this.radius,
   }) : super(key: key);
 
   @override
@@ -15,7 +17,7 @@ class StopWatchRenderer extends StatelessWidget {
         Container(
           decoration: BoxDecoration(
             border: Border.all(color: Colors.amberAccent),
-            shape: BoxShape.circle
+            shape: BoxShape.circle,
           ),
         )
         // Transform(
