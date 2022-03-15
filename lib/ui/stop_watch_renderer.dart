@@ -1,4 +1,7 @@
+import 'dart:math';
+
 import 'package:flutter/material.dart';
+import 'package:stopwatch_flutter/ui/clock_hand.dart';
 import 'package:stopwatch_flutter/ui/elapsed_time_text.dart';
 
 class StopWatchRenderer extends StatelessWidget {
@@ -17,8 +20,14 @@ class StopWatchRenderer extends StatelessWidget {
         Container(
           decoration: BoxDecoration(
             border: Border.all(color: Colors.amberAccent),
-            borderRadius: BorderRadius.circular(radius)
+            borderRadius: BorderRadius.circular(radius),
           ),
+        ),
+        ClockHand(
+          height: radius,
+          angleRadians: 0,
+          width: 1,
+          color: Colors.amberAccent,
         )
         // Transform(
         //   transform: Matrix4.skewX(2),
