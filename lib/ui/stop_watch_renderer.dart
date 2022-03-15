@@ -32,16 +32,20 @@ class StopWatchRenderer extends StatelessWidget {
             width: 1,
             color: Colors.amberAccent,
           ),
-        )
+        ),
         // Transform(
         //   transform: Matrix4.skewX(2),
         //   child: Container(
         //     color: Colors.amberAccent,
         //   ),
         // ),
-        // ElapsedTimeText(
-        //   elapsed: elapsed,
-        // ),
+        Positioned(
+          left: radius * 0.75,
+          top: radius * 1.4,
+          child: ElapsedTimeText(
+            elapsed: elapsed,
+          ),
+        )
       ],
     );
   }
