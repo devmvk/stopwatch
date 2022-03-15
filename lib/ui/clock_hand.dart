@@ -16,10 +16,14 @@ class ClockHand extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      width: width,
-      height: height,
-      color: color,
+    return Transform(
+      transform: Matrix4.identity()
+      ..rotateZ(angleRadians),
+      child: Container(
+        width: width,
+        height: height,
+        color: color,
+      ),
     );
   }
 }
