@@ -23,11 +23,15 @@ class StopWatchRenderer extends StatelessWidget {
             borderRadius: BorderRadius.circular(radius),
           ),
         ),
-        ClockHand(
-          height: radius,
-          angleRadians: 0,
-          width: 1,
-          color: Colors.amberAccent,
+        Positioned(
+          top: radius,
+          right: radius,
+          child: ClockHand(
+            height: radius,
+            angleRadians: 0,
+            width: 1,
+            color: Colors.amberAccent,
+          ),
         )
         // Transform(
         //   transform: Matrix4.skewX(2),
