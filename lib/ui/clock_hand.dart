@@ -16,6 +16,8 @@ class ClockHand extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+
+    //Adds rotation of a line with [angleRadians]
     return Transform(
       transform: Matrix4.identity()
       ..rotateZ(angleRadians),
