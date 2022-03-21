@@ -14,10 +14,14 @@ class ClockSecondsTicker extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      width: width,
-      height: height,
-      color: seconds % 5 == 0 ? Colors.white : Colors.white38,
+    return Transform(
+      alignment: Alignment.center,
+      transform: Matrix4.identity(),
+      child: Container(
+        width: width,
+        height: height,
+        color: seconds % 5 == 0 ? Colors.white : Colors.white38,
+      ),
     );
   }
 }
