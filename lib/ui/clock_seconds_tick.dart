@@ -17,6 +17,7 @@ class ClockSecondsTicker extends StatelessWidget {
     return Container(
       width: width,
       height: height,
+      color: seconds % 5 == 0 ? Colors.white : Colors.white38,
     );
   }
 }
