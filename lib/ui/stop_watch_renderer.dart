@@ -17,12 +17,7 @@ class StopWatchRenderer extends StatelessWidget {
   Widget build(BuildContext context) {
     return Stack(
       children: [
-        Container(
-          decoration: BoxDecoration(
-            border: Border.all(color: Colors.amberAccent),
-            borderRadius: BorderRadius.circular(radius),
-          ),
-        ),
+
         Positioned(
           top: radius,
           right: radius,
