@@ -6,12 +6,14 @@ class ClockSecondsTicker extends StatelessWidget {
   final int seconds;
   final double width;
   final double height;
+  final double radius;
 
   const ClockSecondsTicker({
     Key? key,
     required this.seconds,
     required this.height,
     required this.width,
+    required this.radius,
   }) : super(key: key);
 
   @override
@@ -19,7 +21,9 @@ class ClockSecondsTicker extends StatelessWidget {
     return Transform(
       alignment: Alignment.center,
       transform: Matrix4.identity()
-      ..rotateZ(pi + ((seconds % 60) * (pi / 30))),
+        ..translate(-width / 2, -height / 2, 0.0)
+        ..rotateZ(pi * seconds / 30)
+        ..translate(0.0, radius - height / 2, 0.0),
       child: Container(
         width: width,
         height: height,
