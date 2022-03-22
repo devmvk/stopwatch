@@ -1,3 +1,5 @@
+import 'dart:math';
+
 import 'package:flutter/material.dart';
 
 class ClockSecondsTicker extends StatelessWidget {
@@ -16,7 +18,9 @@ class ClockSecondsTicker extends StatelessWidget {
   Widget build(BuildContext context) {
     return Transform(
       alignment: Alignment.center,
-      transform: Matrix4.identity(),
+      transform: Matrix4.identity()
+      ..translate(0, )
+      ..rotateZ(pi + ((seconds % 60) * (pi / 30))),
       child: Container(
         width: width,
         height: height,
