@@ -19,7 +19,6 @@ class ClockSecondsTicker extends StatelessWidget {
     return Transform(
       alignment: Alignment.center,
       transform: Matrix4.identity()
-      ..translate(0, )
       ..rotateZ(pi + ((seconds % 60) * (pi / 30))),
       child: Container(
         width: width,
