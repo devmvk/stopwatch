@@ -35,7 +35,7 @@ class StopWatchRenderer extends StatelessWidget {
           right: radius,
           child: ClockHand(
             height: radius,
-            angleRadians: pi + ((elapsed.inSeconds % 60) * (pi / 30)),
+            angleRadians: pi + ((elapsed.inMilliseconds) * (pi / 30000)),
             width: 1,
             color: Colors.amberAccent,
           ),
