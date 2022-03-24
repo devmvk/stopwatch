@@ -38,9 +38,9 @@ class StopWatchRenderer extends StatelessWidget {
             left: radius,
             top: radius,
             child: ClockSecondsText(     
-              seconds: index * 5,
+              seconds: index * 5, 
               height: 15,
-              width: 15,  
+              width: 20,  
               radius: radius,        
             ),
           ),
