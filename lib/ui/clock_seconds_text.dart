@@ -1,3 +1,5 @@
+import 'dart:math';
+
 import 'package:flutter/material.dart';
 
 class ClockSecondsText extends StatelessWidget {
@@ -19,6 +21,7 @@ class ClockSecondsText extends StatelessWidget {
       alignment: Alignment.center,
       transform: Matrix4.identity()
       ..translate(-width/2, -height/2, 0)
+      ..rotateZ(pi * seconds / 30)
       ,
       child: Container(
         height: height,
