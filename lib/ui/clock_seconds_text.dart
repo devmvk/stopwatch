@@ -21,7 +21,7 @@ class ClockSecondsText extends StatelessWidget {
       alignment: Alignment.center,
       transform: Matrix4.identity()
       ..translate(-width/2, -height/2, 0)
-      ..rotateZ(pi * seconds / 30)
+      ..rotateZ((pi * seconds / 30) + pi)
       ..translate(0.0, radius - 2 * height, 0.0)
       ,
       child: Container(
