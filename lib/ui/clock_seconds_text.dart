@@ -15,8 +15,11 @@ class ClockSecondsText extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      child: Text(seconds.toString()),
+    return Transform(
+      transform: Matrix4.identity(),
+      child: Container(
+        child: Text(seconds.toString()),
+      ),
     );
   }
 }
