@@ -18,6 +18,8 @@ class ClockSecondsText extends StatelessWidget {
     return Transform(
       transform: Matrix4.identity(),
       child: Container(
+        height: height,
+        width: width,
         child: Text(seconds.toString()),
       ),
     );
