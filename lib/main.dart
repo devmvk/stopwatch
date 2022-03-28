@@ -35,6 +35,12 @@ class MyHomePage extends StatelessWidget {
                   aspectRatio: 1.0,
                 ),
               ),
+              Row(
+                children: [
+                  Container(),
+                  Container()
+                ],
+              )
             ],
           ),
         ),
