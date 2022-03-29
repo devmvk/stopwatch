@@ -17,12 +17,14 @@ class _StopwatchState extends State<Stopwatch>
   @override
   void initState() {
     super.initState();
-    _ticker = this.createTicker((elapsedTicker) {
-      setState(() {
-        _elapsed = elapsedTicker;
-      });
-    });
+    _ticker = this.createTicker(_elapsedTimeListener);
     _ticker.start();
+  }
+
+  _elapsedTimeListener(Duration elapsedTime) {
+    setState(() {
+        _elapsed = elapsedTime;
+      });
   }
 
   @override
