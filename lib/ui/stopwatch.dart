@@ -37,10 +37,13 @@ class _StopwatchState extends State<Stopwatch>
           stream: _elapsedTimeStreamController.stream,
           initialData: Duration(),
           builder: (context, snapshot) {
-            return StopWatchRenderer(
-              elapsed: _elapsed,
-              radius: constraints.maxWidth / 2,
-            );
+            if (snapshot.hasData) {
+              return StopWatchRenderer(
+                elapsed: snapshot.data!,
+                radius: constraints.maxWidth / 2,
+              );
+            }
+            return IgnorePointer();
           },
         );
       },
