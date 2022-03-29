@@ -13,27 +13,35 @@ class _StopwatchState extends State<Stopwatch>
     with SingleTickerProviderStateMixin {
   late final Ticker _ticker;
   Duration _elapsed = Duration.zero;
+  late StreamController<Duration> _elapsedTimeStreamController;
 
   @override
   void initState() {
     super.initState();
+    _elapsedTimeStreamController = StreamController.broadcast();
     _ticker = this.createTicker(_elapsedTimeListener);
     _ticker.start();
   }
 
   _elapsedTimeListener(Duration elapsedTime) {
     setState(() {
-        _elapsed = elapsedTime;
-      });
+      _elapsed = elapsedTime;
+    });
   }
 
   @override
   Widget build(BuildContext context) {
     return LayoutBuilder(
       builder: (context, constraints) {
-        return StopWatchRenderer(
-          elapsed: _elapsed,
-          radius: constraints.maxWidth / 2,
+        return StreamBuilder<Duration>(
+          stream: _elapsedTimeStreamController.stream,
+          initialData: Duration(),
+          builder: (context, snapshot) {
+            return StopWatchRenderer(
+              elapsed: _elapsed,
+              radius: constraints.maxWidth / 2,
+            );
+          },
         );
       },
     );
@@ -42,6 +50,7 @@ class _StopwatchState extends State<Stopwatch>
   @override
   void dispose() {
     _ticker.dispose();
+    _elapsedTimeStreamController.sink.close();
     super.dispose();
   }
 }
