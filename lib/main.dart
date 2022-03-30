@@ -27,6 +27,7 @@ class MyHomePage extends StatelessWidget {
       child: Scaffold(
         body: Center(
           child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Padding(
                 padding: const EdgeInsets.all(32.0),
