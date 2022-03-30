@@ -41,16 +41,15 @@ class MyHomePage extends StatelessWidget {
               ),
               Row(
                 children: [
-                  Expanded(child: SizedBox()),
+                  Spacer(),
                   Container(
                     height: 60,
                     width: 60,
                     decoration: BoxDecoration(
                         shape: BoxShape.circle, color: Colors.amberAccent),
                   ),
-                  Expanded(
+                  Spacer(
                     flex: 2,
-                    child: SizedBox(),
                   ),
                   Container(
                     height: 60,
@@ -60,9 +59,7 @@ class MyHomePage extends StatelessWidget {
                       color: Colors.green,
                     ),
                   ),
-                  Expanded(
-                    child: SizedBox(),
-                  ),
+                  Spacer(),
                 ],
               )
             ],
