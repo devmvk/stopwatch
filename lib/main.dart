@@ -36,10 +36,33 @@ class MyHomePage extends StatelessWidget {
                   aspectRatio: 1.0,
                 ),
               ),
+              SizedBox(
+                height: 20,
+              ),
               Row(
                 children: [
-                  Container(),
-                  Container()
+                  Expanded(child: SizedBox()),
+                  Container(
+                    height: 60,
+                    width: 60,
+                    decoration: BoxDecoration(
+                        shape: BoxShape.circle, color: Colors.amberAccent),
+                  ),
+                  Expanded(
+                    flex: 2,
+                    child: SizedBox(),
+                  ),
+                  Container(
+                    height: 60,
+                    width: 60,
+                    decoration: BoxDecoration(
+                      shape: BoxShape.circle,
+                      color: Colors.green,
+                    ),
+                  ),
+                  Expanded(
+                    child: SizedBox(),
+                  ),
                 ],
               )
             ],
