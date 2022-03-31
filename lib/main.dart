@@ -42,21 +42,27 @@ class MyHomePage extends StatelessWidget {
               Row(
                 children: [
                   Spacer(),
-                  Container(
-                    height: 60,
-                    width: 60,
-                    decoration: BoxDecoration(
-                        shape: BoxShape.circle, color: Colors.amberAccent),
+                  GestureDetector(
+                    onTap: () {},
+                    child: Container(
+                      height: 60,
+                      width: 60,
+                      decoration: BoxDecoration(
+                          shape: BoxShape.circle, color: Colors.amberAccent),
+                    ),
                   ),
                   Spacer(
                     flex: 2,
                   ),
-                  Container(
-                    height: 60,
-                    width: 60,
-                    decoration: BoxDecoration(
-                      shape: BoxShape.circle,
-                      color: Colors.green,
+                  GestureDetector(
+                    onTap: () {},
+                    child: Container(
+                      height: 60,
+                      width: 60,
+                      decoration: BoxDecoration(
+                        shape: BoxShape.circle,
+                        color: Colors.green,
+                      ),
                     ),
                   ),
                   Spacer(),
