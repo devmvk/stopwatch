@@ -17,7 +17,9 @@ class ClockControlPanel extends StatelessWidget {
             height: 60,
             width: 60,
             decoration: BoxDecoration(
-                shape: BoxShape.circle, color: Colors.amberAccent),
+              shape: BoxShape.circle,
+              color: Colors.amberAccent,
+            ),
           ),
         ),
         Spacer(
