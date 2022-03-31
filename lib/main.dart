@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:stopwatch_flutter/ui/clock_control_panel.dart';
 import 'package:stopwatch_flutter/ui/stopwatch.dart';
 
 void main() {
@@ -39,35 +40,7 @@ class MyHomePage extends StatelessWidget {
               SizedBox(
                 height: 20,
               ),
-              Row(
-                children: [
-                  Spacer(),
-                  GestureDetector(
-                    onTap: () {},
-                    child: Container(
-                      height: 60,
-                      width: 60,
-                      decoration: BoxDecoration(
-                          shape: BoxShape.circle, color: Colors.amberAccent),
-                    ),
-                  ),
-                  Spacer(
-                    flex: 2,
-                  ),
-                  GestureDetector(
-                    onTap: () {},
-                    child: Container(
-                      height: 60,
-                      width: 60,
-                      decoration: BoxDecoration(
-                        shape: BoxShape.circle,
-                        color: Colors.green,
-                      ),
-                    ),
-                  ),
-                  Spacer(),
-                ],
-              )
+              ClockControlPanel()
             ],
           ),
         ),
