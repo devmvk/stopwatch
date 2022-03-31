@@ -24,9 +24,7 @@ class _StopwatchState extends State<Stopwatch>
   }
 
   _elapsedTimeListener(Duration elapsedTime) {
-    setState(() {
-      _elapsed = elapsedTime;
-    });
+    _elapsedTimeStreamController.sink.add(elapsedTime);
   }
 
   @override
